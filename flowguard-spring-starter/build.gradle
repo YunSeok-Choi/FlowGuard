@@ -1,0 +1,11 @@
+description = 'Spring Boot starter for FlowGuard'
+
+dependencies {
+    api project(':flowguard-core')
+
+    api "org.springframework.boot:spring-boot-autoconfigure:${rootProject.ext.springBootVersion}"
+    compileOnly "org.springframework.boot:spring-boot-starter:${rootProject.ext.springBootVersion}"
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:${rootProject.ext.springBootVersion}"
+
+    testImplementation "org.springframework.boot:spring-boot-starter-test:${rootProject.ext.springBootVersion}"
+}

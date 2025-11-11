@@ -1,1 +1,3 @@
 rootProject.name = 'flowguard'
+include 'flowguard-core'
+include 'flowguard-spring-starter'
