@@ -3,7 +3,9 @@ package io.flowguard.core.print;
 import java.util.List;
 import java.util.Objects;
 
-/** System.out 에 텍스트 트리를 그대로 출력하는 기본 구현. */
+/**
+ * System.out 에 텍스트 트리를 그대로 출력하는 기본 구현.
+ */
 public final class ConsoleFlowGuardPrinter implements FlowGuardPrinter {
 
     public static final String ID = "console";

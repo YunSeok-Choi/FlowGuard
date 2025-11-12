@@ -2,6 +2,7 @@ package io.flowguard.core;
 
 import io.flowguard.core.config.FlowGuardConfig;
 import io.flowguard.core.trace.TraceInterceptor;
+
 import java.util.Objects;
 
 /**
@@ -9,7 +10,8 @@ import java.util.Objects;
  */
 public final class FlowGuard {
 
-    private FlowGuard() {}
+    private FlowGuard() {
+    }
 
     public static void trace(Runnable runnable) {
         trace(FlowGuardConfig.defaults(), runnable);

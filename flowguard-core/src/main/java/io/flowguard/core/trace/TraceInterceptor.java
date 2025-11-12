@@ -2,6 +2,7 @@ package io.flowguard.core.trace;
 
 import io.flowguard.core.config.FlowGuardConfig;
 import io.flowguard.core.print.FlowGuardPrinter;
+
 import java.time.Duration;
 import java.util.List;
 import java.util.Objects;
@@ -36,10 +37,11 @@ public final class TraceInterceptor {
         }
         long elapsedNanos = System.nanoTime() - startNanos;
         String title = "FlowGuard :: " + (targetThread != null ? targetThread.getName() : "unknown");
-        List<String> lines = List.of(
-                "MVP trace stub (실제 StackWalker 연동 전)",
-                "pollInterval=" + formatDuration(config.pollInterval()),
-                "elapsed=" + formatDuration(Duration.ofNanos(elapsedNanos)));
+        List<String> lines =
+                List.of(
+                        "MVP trace stub (실제 StackWalker 연동 전)",
+                        "pollInterval=" + formatDuration(config.pollInterval()),
+                        "elapsed=" + formatDuration(Duration.ofNanos(elapsedNanos)));
         printer.print(title, lines);
     }
 

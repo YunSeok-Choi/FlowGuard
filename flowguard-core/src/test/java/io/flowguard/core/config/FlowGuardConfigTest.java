@@ -1,13 +1,14 @@
 package io.flowguard.core.config;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import io.flowguard.core.print.FlowGuardPrinter;
 import io.flowguard.core.print.FlowGuardPrinters;
+
 import java.time.Duration;
 import java.util.List;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -33,12 +34,12 @@ class FlowGuardConfigTest {
                     }
 
                     @Override
-                    public void print(CharSequence title, List<String> lines) {}
+                    public void print(CharSequence title, List<String> lines) {
+                    }
                 };
 
-        FlowGuardConfig config = FlowGuardConfig.defaults()
-                .withPollInterval(Duration.ofMillis(25))
-                .withPrinter(printer);
+        FlowGuardConfig config =
+                FlowGuardConfig.defaults().withPollInterval(Duration.ofMillis(25)).withPrinter(printer);
 
         assertThat(config.pollInterval()).isEqualTo(Duration.ofMillis(25));
         assertThat(config.printer()).isSameAs(printer);

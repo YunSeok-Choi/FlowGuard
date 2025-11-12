@@ -7,9 +7,13 @@ import java.util.List;
  */
 public interface FlowGuardPrinter {
 
-    /** 환경 설정에서 식별할 수 있는 짧은 ID (예: "console"). */
+    /**
+     * 환경 설정에서 식별할 수 있는 짧은 ID (예: "console").
+     */
     String id();
 
-    /** 제목과 렌더링된 라인 리스트를 출력한다. */
+    /**
+     * 제목과 렌더링된 라인 리스트를 출력한다.
+     */
     void print(CharSequence title, List<String> lines);
 }
