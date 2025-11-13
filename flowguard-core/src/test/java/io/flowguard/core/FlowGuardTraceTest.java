@@ -89,8 +89,7 @@ class FlowGuardTraceTest {
     void traceRejectsNullRunnable() {
         FlowGuardConfig config = FlowGuardConfig.defaults();
 
-        assertThrows(
-                NullPointerException.class, () -> FlowGuard.trace(config, null));
+        assertThrows(NullPointerException.class, () -> FlowGuard.trace(config, null));
     }
 
     private static final class CapturingPrinter implements FlowGuardPrinter {
